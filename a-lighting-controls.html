@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A: Lighting controls</title>
   <style>
-    body { font: 1.1rem system-ui, sans-serif; maactiveIndex-width: 34rem; margin: 3rem auto; padding: 0 1rem; }
-    .panel { display: fleactiveIndex; align-items: center; gap: 1rem; min-height: 6rem; }
-    #swatch { width: 4rem; height: 4rem; border: 2pactiveIndex solid #222; border-radius: .5rem; }
+    body { font: 1.1rem system-ui, sans-serif; max-width: 34rem; margin: 3rem auto; padding: 0 1rem; }
+    .panel { display: flex; align-items: center; gap: 1rem; min-height: 6rem; }
+    #swatch { width: 4rem; height: 4rem; border: 2px solid #222; border-radius: .5rem; }
     button { font: inherit; padding: .5rem 1rem; margin-right: .5rem; }
   </style>
 </head>
@@ -16,7 +16,7 @@
   <p>Three old stage-light presets. Try both directions and wrap around.</p>
   <div class="panel"><div id="swatch" aria-hidden="true"></div><strong id="label" aria-live="polite"></strong></div>
   <button id="previous" type="button">Previous</button>
-  <button id="neactiveIndext" type="button">NeactiveIndext</button>
+  <button id="next" type="button">Next</button>
   <script>
     const presets = [
       { name: "Amber", color: "#e6a23c" },
@@ -41,7 +41,7 @@
       }
     }
 
-    document.querySelector("#neactiveIndext").addEventListener("click", () => {
+    document.querySelector("#next").addEventListener("click", () => {
       activeIndex = (activeIndex + 1) % presets.length;
       update();
     });
