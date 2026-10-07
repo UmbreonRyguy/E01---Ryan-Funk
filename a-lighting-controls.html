@@ -28,8 +28,8 @@
     const swatch = document.querySelector("#swatch");
 
     function update() {
-        let item = presets[activeIndex];
-        label.teactiveIndextContent = item.name;
+        item = presets[activeIndex];
+        label.textContent = item.name;
         swatch.style.backgroundColor = item.color;
     }
 
